@@ -29,7 +29,7 @@ namespace WebApp.Repositories
         public async Task<Movie> UpdateMovie(Movie Movie)
         {
             if (Movie is null)
-                throw new InvalidOperationException("Böyle Bir Film Mevcut Değil.");
+                throw new InvalidOperationException("Film Mevcut Değil.");
 
             var movie = _mapper.Map<Movie>(Movie);
              _dbContext.Movies.Update(movie);
